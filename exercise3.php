@@ -40,7 +40,7 @@ if (isset($_POST["percentage"]))
 <br>
 <form action="exercise3.php" method="post">
     <label title="Your percentage">
-        <input type="number" name="percentage" placeholder="Enter your percentage" value=<?php if (isset($_POST["percentage"])) echo $_POST["percentage"] ?>>
+        <input type="number" name="percentage" placeholder="Enter your percentage" ?>
     </label>
     <input type="submit" value="Check">
 </form>
@@ -70,15 +70,13 @@ if (isset($_POST["age"])) {
                 name="name"
                 placeholder="Enter your name"
                 type="text"
-                value="<?php if (isset($_POST["name"])) echo $_POST["name"] ?>"
                 required>
     </label>
     &nbsp;
     <label title="Age">
         <input type="number"
                name="age"
-               placeholder="Enter age"
-               value="<?php if (isset($_POST["age"])) echo $_POST["age"] ?>"
+               placeholder="Enter your age"
                min="0"
                max="119"
                required>
@@ -89,6 +87,32 @@ if (isset($_POST["age"])) {
 
 <span>Eligibility for voting: </span>
     <?php echo $eligible ?>.<br/><br/>
+
+
+
+<?php
+#TASK 5
+
+for ($i = 8; $i >= 1; $i--) {
+    for ($j = 1; $j <= $i; $j++) {
+        echo $j;
+    }
+    echo "<br/>";
+}
+?>
+<br/>
+
+
+
+<?php
+#TASK 6
+
+for ($i = 1; $i <= 8; $i++) {
+	echo str_repeat("*", $i) . "<br/>";
+}
+?>
+
+
 
 
 
