@@ -23,6 +23,7 @@ else
 ?>
 
 
+
 <?php
 #TASK 3
 
@@ -39,14 +40,55 @@ if (isset($_POST["percentage"]))
 <br>
 <form action="exercise3.php" method="post">
     <label title="Your percentage">
-        <input type="number" name="percentage" value=<?php if (isset($_POST["percentage"])) echo $_POST["percentage"] ?>>
+        <input type="number" name="percentage" placeholder="Enter your percentage" value=<?php if (isset($_POST["percentage"])) echo $_POST["percentage"] ?>>
     </label>
     <input type="submit" value="Check">
 </form>
 
 <?php
-echo "Your grade is: $grade";
+echo "Your grade is: $grade<br/><br/>";
 ?>
+
+
+
+<?php
+#TASK 4 
+
+$eligible = "Please type your age";
+if (isset($_POST["age"])) {
+	if ($_POST["age"] >= 18)
+		$eligible = "Eligible";
+	else
+		$eligible = "Not eligible";
+}
+?>
+
+
+<form action="exercise3.php" method="post">
+    <label title="Name">
+        <input
+                name="name"
+                placeholder="Enter your name"
+                type="text"
+                value="<?php if (isset($_POST["name"])) echo $_POST["name"] ?>"
+                required>
+    </label>
+    &nbsp;
+    <label title="Age">
+        <input type="number"
+               name="age"
+               placeholder="Enter age"
+               value="<?php if (isset($_POST["age"])) echo $_POST["age"] ?>"
+               min="0"
+               max="119"
+               required>
+    </label>
+    &nbsp;
+    <input type="submit" value="Check">
+</form>
+
+<span>Eligibility for voting: </span>
+    <?php echo $eligible ?>.<br/><br/>
 
 
 
