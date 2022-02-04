@@ -9,4 +9,17 @@ else {
 	echo "Not August, this is $month_name so I don't have any holidays.<br/>";
 }
 
+
+#TASK 2
+
+$color = "red";
+
+if ($color == "red" || $color == "#ff0000")
+	echo "<br>"."The color is <span style='color: $color'>red</span>.<br/>";
+else
+	echo "The color is not red.<br/>";
+
+
 ?>
+
+
