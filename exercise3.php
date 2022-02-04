@@ -1,3 +1,9 @@
+<!--- 
+my web-dev repository: https://github.com/DenisFedulov/DenisFedulov_wp
+project website repository: https://github.com/PopekD/Sports-Club
+project pages link: https://popekd.github.io/Sports-Club/
+-->
+
 <?php
 #TASK 1
 
