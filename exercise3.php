@@ -23,6 +23,32 @@ else
 ?>
 
 
+<?php
+#TASK 3
+
+$percentage = $_POST["percentage"];
+$grade = "Please enter percentage";
+
+if (isset($_POST["percentage"]))
+	if ($percentage > 80) $grade = "Excellent";
+	else if ($percentage > 70) $grade = "Great";
+	else if ($percentage > 60) $grade = "Good";
+	else if ($percentage > 50) $grade = "Pass";
+	else $grade = "Fail";
+?>
+<br>
+<form action="exercise3.php" method="post">
+    <label title="Your percentage">
+        <input type="number" name="percentage" value=<?php if (isset($_POST["percentage"])) echo $_POST["percentage"] ?>>
+    </label>
+    <input type="submit" value="Check">
+</form>
+
+<?php
+echo "Your grade is: $grade";
+?>
+
+
 
 
 
